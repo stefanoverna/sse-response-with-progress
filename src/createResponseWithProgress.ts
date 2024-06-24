@@ -33,7 +33,6 @@ async function getValueAndElapsedTime<T>(
 
 export function createResponseWithProgress<T, E>(
   config: Config<E>,
-  id: string,
   steps: Step<T>[],
 ) {
   const encoder = new TextEncoder();
