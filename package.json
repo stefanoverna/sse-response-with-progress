@@ -1,0 +1,28 @@
+{
+  "name": "sse-response-with-progress",
+  "version": "0.0.0",
+  "description": "Manage long-standing, multi-step tasks easily with SSE",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo 1",
+    "build": "rimraf dist && tsc",
+    "watch": "rimraf dist && tsc --watch",
+    "prepare": "npm run test && npm run build",
+    "format": "biome check src --write && biome format --write src"
+  },
+  "license": "MIT",
+  "author": "Stefano Verna <s.verna@datocms.com>",
+  "homepage": "https://github.com/stefanoverna/sse-response-with-progress",
+  "files": ["dist", "src"],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.2",
+    "@types/lodash": "^4.17.5",
+    "np": "^10.0.6",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.5.2"
+  }
+}
