@@ -111,10 +111,9 @@ export function createResponseWithProgress<T, E>(
         await config.storage.incrementCounters(increments);
       } catch (error) {
         send('requestError', config.serializeError(error));
-
-        controller.close();
-
         throw error;
+      } finally {
+        controller.close();
       }
     },
   });
